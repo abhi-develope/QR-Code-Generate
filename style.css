@@ -1,0 +1,106 @@
+:root{
+    --primary: #47185c;
+    --primary-dark:#811F7F;
+}
+
+body{
+    background: var(--primary);
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+
+.box{
+    background-color: white;
+    width: 300px;
+    /* height: 250px; */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    
+}
+.box p{
+    font-size: 25px;
+    margin-top: -30px;
+    padding-top: 30px;
+    
+}
+form{
+    display: grid;
+    gap: 10px;
+}
+
+form input{
+    height: 30px;
+    padding: 5px;
+}
+form input:focus-visible{
+    border: 1px solid var(--primary-dark);
+    outline: 1px solid var(--primary-dark);
+
+}
+form button{
+    height: 40px;
+    padding: 5px;
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    opacity: 0.9;
+    /* transition: 0.3s ease-in; */
+}
+form button:hover{
+   opacity: 1;
+   /* transition: 0.3s ease-in; */
+}
+form button:active{
+  background-color: var(--primary);
+}
+
+.qr-container{
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    height: 0;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in, height 0.1s ease;
+
+}
+.qr-container.show{
+    padding-bottom: 30px;
+    height: 150px;
+    opacity: 1;
+
+    transition: opacity 0.3s ease-in, height 0.1s ease;  
+    
+    
+}
+.qr-container img {
+   height: 150px;
+   padding: 10px;
+    
+}
+
+@media (max-width: 500px){
+    .box {
+        width: 80%;
+    }
+
+    .box h2{
+        font-size: 24px;
+    }
+    .box p{
+        font-size: 20px;
+    }
+    
+}
